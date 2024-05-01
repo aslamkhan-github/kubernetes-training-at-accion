@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: busybox
+spec:
+  type: LoadBalancer
+  selector:
+    app: busybox
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
